@@ -1,0 +1,68 @@
+
+Quick Start Guide:
+------------------
+
+This is a plugin designed to be used with BungeeCord to allow Eaglercraft players to join your BungeeCord server
+
+It is assumed that the reader already knows what BungeeCord is and has a working server set up that is joinable via java edition
+
+If you don't know what BungeeCord is, please research the topic yourself first before continuing
+
+Waterfall and FlameCord have also been tested, but EaglerXBungee was natively compiled against BungeeCord
+
+
+
+WARNING: This plugin is very sensitive to what the specific version of BungeeCord, Waterfall, or FlameCord is used by the server
+
+If you get errors, the recommended version of BungeeCord/Waterfall/FlameCord to use is printed to the console when the plugin is loaded
+
+No other forks of BungeeCord are officially supported, although many forks will still work perfectly fine
+
+
+
+Instructions:
+
+1. Place the "EaglerXBungee-1.0.10.jar" file in your BungeeCord server's "plugins" directory
+
+2. Edit the BungeeCord config.yml and set "online_mode:" to "false"
+
+3. Edit server.properties on the backend minecraft server to set "online-mode=false"
+
+4. Start the servers, wait for it to load
+
+5. Once loaded, use the offline download version of EaglercraftX 1.8 and "Direct Connect" to "ws://localhost:8081/" from the multiplayer menu
+
+6. If you are using a VPS, replace "localhost" with the IP address of the VPS when you connect
+
+7. To add HTTPS support to your server and connect to it via the "wss://" protocol, use a reverse proxy like nginx
+
+
+
+In this configuration, any player will be able to join your server using any username, which goes against the Minecraft EULA
+
+Although it is against the rules, I don't know of any record of Mojang filing a complaint against a server owner just for allowing Eaglercraft players to join, so you're probably safe
+
+
+
+If you would like your players to use their real Microsoft account to login instead, do the following:
+
+1. Edit the BungeeCord config.yml and set "online_mode:" to "true" again
+
+2. Start the servers, wait for it to load
+
+3. Join the BungeeCord server using Minecraft Java Edition while logged into your Microsoft account
+
+4. Run the "/eagler" command, it will give you a temporary login code
+
+5. Disconnect from the server, launch EaglercraftX 1.8 and set your profile username to the username of your Microsoft account
+
+6. Join the server using EaglercraftX 1.8, when prompted enter the temporary login code into the password field on the login screen
+
+7. EaglerXBungee will log you into the server as the Microsoft account you generated the login code with
+
+
+
+These are only a handful of all the features included with EaglerXBungee, this guide is incomplete
+
+Look in the README of the EaglercraftX 1.8 github repository for (maybe) more details on the config files
+
